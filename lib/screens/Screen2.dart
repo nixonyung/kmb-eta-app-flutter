@@ -19,7 +19,7 @@ class Screen2 extends StatelessWidget {
             thickness: 2,
           ),
           itemBuilder: (context, index) {
-            final tokens = dataBox.keys.toList()[index].split("_");
+            final tokens = dataBox.keys.toList()[index].split(",");
             return RouteEtaFavoriteItem(
               route: tokens[0],
               bound: tokens[1],

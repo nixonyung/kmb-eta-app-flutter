@@ -5,7 +5,7 @@ String generateFavoriteKey({
   required int index,
   required String stopId,
 }) =>
-    "${route}_${bound}_${serviceType}_${index}_${stopId}";
+    "${route},${bound},${serviceType},${index},${stopId}";
 
 
 // generateFavoriteKey(
