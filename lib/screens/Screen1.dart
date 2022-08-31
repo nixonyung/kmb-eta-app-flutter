@@ -43,6 +43,7 @@ class Screen1 extends HookWidget {
                     ),
                   )
                   .toList();
+
               return ListView.separated(
                 itemCount: filteredRoutes.length,
                 separatorBuilder: (context, index) => const Divider(
@@ -73,6 +74,13 @@ class Screen1 extends HookWidget {
                       ),
                     );
                   },
+                  tileColor: Get.isDarkMode
+                      ? filteredRoutes[index]["bound"] == "I"
+                          ? Color(0xaa67e491)
+                          : Color(0xaa67bae4)
+                      : filteredRoutes[index]["bound"] == "I"
+                          ? Color(0xaa0b9b46)
+                          : Color(0xaa0b709b),
                 ),
               );
             },

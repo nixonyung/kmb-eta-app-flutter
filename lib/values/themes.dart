@@ -5,7 +5,6 @@ final lightThemeData = FlexThemeData.light(
   scheme: FlexScheme.redWine,
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
   blendLevel: 20,
-  appBarOpacity: 0.95,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 20,
     blendOnColors: false,
@@ -25,7 +24,6 @@ final darkThemeData = FlexThemeData.dark(
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
   blendLevel: 15,
   appBarStyle: FlexAppBarStyle.primary,
-  appBarOpacity: 0.90,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 30,
     bottomNavigationBarSelectedLabelSchemeColor: SchemeColor.onPrimary,

@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
                       ? ThemeMode.light
                       : ThemeMode.dark;
                 },
+                padding: EdgeInsets.only(right: 10),
               ),
             ],
           ),

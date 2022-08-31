@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-const height = 70.0;
 const outerPadding = EdgeInsets.fromLTRB(15, 15, 20, 10);
 const innerPadding = EdgeInsets.symmetric(vertical: 12, horizontal: 10);
 const fontSize = 16.0;
 const cursorHeight = 20.0;
 
 class StyledTextField extends StatefulWidget {
-  final Rx<String> enteredValue;
+  final Rx<String> enteredValue; // should be provided by parent
 
   const StyledTextField({Key? key, required this.enteredValue})
       : super(key: key);
@@ -23,13 +22,13 @@ class _StyledTextFieldState extends State<StyledTextField> {
   @override
   void dispose() {
     myController.dispose();
-    super.dispose();
+    super.dispose(); // the only reason to use a StafefulWidget
   }
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: height,
+    return Container(
+      color: Theme.of(context).backgroundColor,
       child: Padding(
         padding: outerPadding,
         child: TextField(

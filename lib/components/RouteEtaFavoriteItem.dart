@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/generateFavoriteKey.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fquery/fquery.dart';
+import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:timer_builder/timer_builder.dart';
 
@@ -151,9 +152,13 @@ class RouteEtaFavoriteItem extends HookWidget {
           },
         ),
         contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        tileColor: bound == "I"
-            ? Color.fromARGB(255, 28, 108, 174)
-            : Color.fromARGB(255, 35, 146, 83),
+        tileColor: Get.isDarkMode
+            ? bound == "I"
+                ? Color(0xaa67e491)
+                : Color(0xaa67bae4)
+            : bound == "I"
+                ? Color(0xaa0b9b46)
+                : Color(0xaa0b709b),
       ),
     );
   }
